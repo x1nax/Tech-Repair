@@ -1,0 +1,168 @@
+
+.side-menu {
+  width: 320px;
+  transform: translateX(-130%);
+  background-color: #FFFFFF;
+  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+  position: fixed;
+  top: 0;
+  z-index: 2;
+
+  .side-menu__header {
+    margin-bottom: 3px;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 7px
+  }
+  
+  .nav__logo {
+    margin-right: 78px;
+  }
+  
+  .main {
+    margin-bottom: 13px;
+  }
+  
+  .menu {
+    display: flex;
+    flex-flow: column;
+    height: 358px;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  
+  .menu__item {
+    list-style: none;
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .menu__select-marker {
+    height: 25px;
+    bottom: -2px;
+    left: 0;
+    @extend .selected;
+    display: none;
+  }
+  
+  .menu__name {
+    color:  black;
+  }
+
+  .footer {
+    display: flex;
+    flex-flow: column;
+    padding-bottom: 25px;
+  }
+  
+  .comunications {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    padding-left: 5px;
+    margin-top: 16px;
+    margin-bottom: 9px;
+  }
+  
+  .comunications__item {
+    list-style: none;
+  }
+  
+  .footer__mail {
+    color: black;
+    text-decoration: none;
+    padding-left: 15px;
+    font-weight: 500;
+    margin-bottom: 13px;
+  }
+  
+  .footer__phone {
+    color: black;
+    text-decoration: none;
+    font-weight: 800;
+    padding-left: 16px;
+    letter-spacing: -.7px;
+    font-size: 1.5em;
+    margin-bottom: 11px;
+  }
+  
+  .langs {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    padding-left: 16px;
+  }
+  
+  .langs__item {
+    list-style: none;
+    display: flex;
+    padding-right: 10px;
+  }
+  
+  .langs__btn {
+    font-size: .95em;
+    padding: 0;
+    font-weight: 500;
+  }
+  
+  .langs__btn:active {
+    opacity: .6;
+  }
+}
+
+
+
+@media (min-width:360px) {
+  .side-menu {
+    padding-left: 8px;
+    width: 360px;
+  }
+
+  .nav__logo {
+    transform: scale(1.06);
+    margin-right: 95px;
+  }
+
+  .nav:last-child {
+    padding-right: 15px;
+  }
+}
+
+@media (min-width:361px){
+  .side-menu__header {
+    margin-bottom: 27px;
+  }
+  
+  .nav__logo {
+    margin-right: 63px;
+    transform: scale(1);
+  }
+
+  .main {
+    margin-bottom: 100px;
+  }
+}
+
+@media (min-width:550px) {
+  .side-menu {
+    width: 320px;
+
+    .menu__select-marker {
+      left: -8px;
+    }
+  }
+
+  .main {
+    margin-bottom: 306px;
+  }
+
+  .footer__phone {
+    margin-bottom: 43px;
+  }
+}
+
+
+
