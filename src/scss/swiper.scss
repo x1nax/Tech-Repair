@@ -8,14 +8,7 @@
 }
 
 .brend-list__item {
-  @extend .swiper-item;
-  padding: 6px 13px;
   margin-left: 17px;
-  width: 240px;
-  align-items: center;
-  box-sizing: border-box;
-  justify-content: space-between;
-  height: 70px;
 }
 
 .brend__btn, .kind__btn {
@@ -23,28 +16,37 @@
     @extend .not-hover;
   }
   
-  &:hover svg {
+  &:hover, &:focus {
     @extend .hover;
   }
 
-  &:focus svg {
-    @extend .hover;
-  }
-
-  &:active svg {
+  &:active {
     @extend .active;
   }
 }
 
 .brend__btn {
-  padding-right: 1px;
-  padding-top: 5px;
+  padding: 0 14px;
+  width: 240px;
+  @extend .swiper-item;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
 }
 
 .kind__btn {
   align-self: flex-end;
   padding-bottom: 10px;
   padding-right: 15px;
+  @extend .swiper-item;
+  flex-flow: column;
+  min-height: 160px;
+  justify-content: space-between;
+  width: 240px;
+
+  & svg {
+    align-self: flex-end;
+  }
 }
 
 .swiper-container {
@@ -88,10 +90,6 @@
   margin-bottom: 16px;
 }
 
-.prices-title {
-  @extend .swipers-title;
-}
-
 .kind-list__item {
   @extend .swiper-item;
   flex-flow: column;
@@ -105,10 +103,12 @@
   padding-top: 15px;
   padding-left: 14px;
   font-weight: 400;
+  font-size: .95rem;
 }
 
 .prices-title {
-  margin-top: 4px;
+  @extend .swipers-title;
+  margin-top: 7px;
   margin-bottom: 16px;
 }
 
@@ -244,7 +244,7 @@
   .brend-list {
     display: flex;
     flex-flow: wrap;
-    margin-left: 25px;
+    margin-left: 7px;
     overflow: hidden;
     height: 160px;
     margin-bottom: 25px;
@@ -258,8 +258,7 @@
 
   .brend-list__item {
     margin: 0;
-    width: 223px;
-    margin-right: 24px;
+    margin-right: 6px;
     margin-bottom: 18px;
   }
 
